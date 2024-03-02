@@ -4,7 +4,8 @@
 // Variables
 $primary-color: #E73C37;
 $primary-color2: #FFFBFB;
-$text-color: #2D2E2E;
+// $text-color: #2D2E2E;
+$text-color: #FFFFFF;
 $text-color-light: #736d6e33;
 $white: #FFFFFF;
 $stroke-color: #DCDCDE;
@@ -106,3 +107,166 @@ a {
     background-color: $stroke-color;
     color: $primary-color2;
 }
+#root{
+    width: 100dvw;
+    min-height: 100svh;
+    @include fda;
+}
+
+
+// Pages
+// Pages - Home
+.home{
+    @include fd;
+    gap: 30px;
+    width: calc(100% - 200px);
+    min-width: 90svw;
+    height: fit-content;
+    .banner{
+        height: 400px;
+        max-height: calc(100dvh - 60px);
+        width: 100%;
+        margin: 30px 0px 0px 0px;
+        border-radius: 40px;
+        background-color: $text-color;
+        // background-color: red;
+        position: relative;
+        img{
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            max-height: 80%
+        }
+    }
+    .projects,
+    .skills{
+        @include fd;
+        gap: 10px;
+        .header{
+            font-weight: 600;
+        }
+    }
+    .projects{
+        .list{
+            // display: flex;
+            @include fa;
+            gap: 15px;
+            max-width: 100%;
+            height: fit-content;
+            overflow-x: scroll;
+            .project{
+                @include fd;
+                gap: 10px;
+                min-width: 350px;
+                width: 350px;
+                height: fit-content;
+                position: relative;
+                transition: all ease .5s;
+                &:hover{
+                    min-width: 400px;
+                    display: grid;
+                    // height: 300px;
+                    .project-image-cont{
+                        img{
+                            filter: brightness(130%) grayscale(60%);
+                            opacity: .3;
+                        }
+                        height: 260px;
+                    }
+                    h3{
+                        position: absolute;
+                        align-self: center;
+                        justify-self: center;
+                    }
+                }
+                .project-image-cont{
+                    height: 200px;
+                    width: 100%;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    img{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                        filter: brightness(90%);
+                    }
+                }
+                h3{
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    .skills{
+        .list{
+            max-width: 100%;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+            .skill{
+                @include fdj;
+                width: calc(100% - 20px);
+                padding: 10px;
+                background-color: rgb(250, 250, 250, 0.08);
+                border: solid 1px rgb(250, 250, 250, 0.4);
+                border-radius: 10px;
+                color: $text-color;
+                svg{
+                    height: 40px;
+                    width: 40px;
+                    path{
+                        fill: $text-color;
+                    }
+                }
+                .texts{
+                    @include fd;
+                    h3{
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// Responsiveness
+// Extra Small Devices (Phones)
+@media only screen and (max-width: 575.98px) {
+    .home{
+        .skills{
+            .list{
+                grid-template-columns: repeat(2, 1fr);
+                svg{
+                    display: none;
+                }
+            }
+        }
+        .projects{
+            .list{
+                .project{
+                    min-width: 300px;
+                    &:hover{
+                        min-width: calc(100% - 2svw);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Small Devices (Tablets-Portrait)
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {}
+
+// Medium Devices (Tablets-Landscape)
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {}
+
+// Small Devices (Phone-Landscape)
+@media only screen and (max-height: 600px) and (min-width: 600px) {}
+
+// Large Devices (Laptops/Desktops)
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {}
+
+// Extra Large Devices (Large Desktops)
+@media only screen and (min-width: 1200px) {}

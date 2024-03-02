@@ -26,7 +26,7 @@ a {
 
 a {
   text-decoration: none;
-  color: #2D2E2E;
+  color: #FFFFFF;
 }
 a:hover {
   text-decoration: none;
@@ -35,6 +35,143 @@ a:hover {
 .button-dull {
   background-color: #DCDCDE;
   color: #FFFBFB;
+}
+
+#root {
+  width: 100dvw;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: calc(100% - 200px);
+  min-width: 90svw;
+  height: fit-content;
+}
+.home .banner {
+  height: 400px;
+  max-height: calc(100dvh - 60px);
+  width: 100%;
+  margin: 30px 0px 0px 0px;
+  border-radius: 40px;
+  background-color: #FFFFFF;
+  position: relative;
+}
+.home .banner img {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  max-height: 80%;
+}
+.home .projects,
+.home .skills {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.home .projects .header,
+.home .skills .header {
+  font-weight: 600;
+}
+.home .projects .list {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  max-width: 100%;
+  height: fit-content;
+  overflow-x: scroll;
+}
+.home .projects .list .project {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 350px;
+  width: 350px;
+  height: fit-content;
+  position: relative;
+  transition: all ease 0.5s;
+}
+.home .projects .list .project:hover {
+  min-width: 400px;
+  display: grid;
+}
+.home .projects .list .project:hover .project-image-cont {
+  height: 260px;
+}
+.home .projects .list .project:hover .project-image-cont img {
+  filter: brightness(130%) grayscale(60%);
+  opacity: 0.3;
+}
+.home .projects .list .project:hover h3 {
+  position: absolute;
+  align-self: center;
+  justify-self: center;
+}
+.home .projects .list .project .project-image-cont {
+  height: 200px;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.home .projects .list .project .project-image-cont img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(90%);
+}
+.home .projects .list .project h3 {
+  font-weight: 400;
+}
+.home .skills .list {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+}
+.home .skills .list .skill {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: calc(100% - 20px);
+  padding: 10px;
+  background-color: rgba(250, 250, 250, 0.08);
+  border: solid 1px rgba(250, 250, 250, 0.4);
+  border-radius: 10px;
+  color: #FFFFFF;
+}
+.home .skills .list .skill svg {
+  height: 40px;
+  width: 40px;
+}
+.home .skills .list .skill svg path {
+  fill: #FFFFFF;
+}
+.home .skills .list .skill .texts {
+  display: flex;
+  flex-direction: column;
+}
+.home .skills .list .skill .texts h3 {
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 575.98px) {
+  .home .skills .list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .home .skills .list svg {
+    display: none;
+  }
+  .home .projects .list .project {
+    min-width: 300px;
+  }
+  .home .projects .list .project:hover {
+    min-width: calc(100% - 2svw);
+  }
 }
 
 /*# sourceMappingURL=App.css.map */
