@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;500;600;700&display=swap");
+* {
+  font-family: "Montserrat";
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+.App {
+  text-align: center;
+  color: #E73C37;
+  background-color: #FFFBFB;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: #2D2E2E;
+}
+a:hover {
+  text-decoration: none;
+}
+
+.button-dull {
+  background-color: #DCDCDE;
+  color: #FFFBFB;
+}
+
+/*# sourceMappingURL=App.css.map */

@@ -1,0 +1,108 @@
+// Import
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;500;600;700&display=swap');
+
+// Variables
+$primary-color: #E73C37;
+$primary-color2: #FFFBFB;
+$text-color: #2D2E2E;
+$text-color-light: #736d6e33;
+$white: #FFFFFF;
+$stroke-color: #DCDCDE;
+$top-navbar-height: 70px;
+$button-radius: 8px;
+$footer-background-color: #333333;
+// $landingbannerheight: calc(100vh - $top-navbar-height);
+// $side-menu-width: 250px;
+// $chat-left-width: 310px;
+
+@mixin fdja {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+;
+
+@mixin fdj {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+;
+
+@mixin fda {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+;
+
+@mixin fja {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+;
+
+@mixin fj {
+    display: flex;
+    justify-content: center;
+}
+
+;
+
+@mixin fa {
+    display: flex;
+    align-items: center
+}
+
+;
+
+@mixin fd {
+    display: flex;
+    flex-direction: column;
+}
+
+// General
+* {
+    font-family: 'Montserrat';
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+.App {
+    text-align: center;
+    color: $primary-color;
+    background-color: $primary-color2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: $text-color;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.button-dull {
+    background-color: $stroke-color;
+    color: $primary-color2;
+}
